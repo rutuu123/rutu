@@ -108,8 +108,8 @@ def hangman():
         if guess not in word_to_guess:
             attempts -= 1
             print(draw_hangman(attempts))
+            
             print(guess,"is not there in the word")
-
         guessed_letters.append(guess)
         guessedWords=classifyLetter(guess,word_to_guess,CorrectlyGuessedLetters,wronglyGuessedLetters)
         if set(guessedWords['correct']) == set(word_to_guess):            
